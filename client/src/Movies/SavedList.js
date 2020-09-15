@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom'
 
 export default function SavedList(props) {
+  console.log(props)
   const history = useHistory()
   const backToHome =() => {
     history.push('/')
@@ -10,7 +11,6 @@ export default function SavedList(props) {
     <div className="saved-list">
       <h3>Saved Movies:</h3>
       {props.list.map(movie => (
-        
         <span className="saved-movie">{movie.title}</span>
       ))}
       
